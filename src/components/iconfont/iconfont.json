@@ -1,0 +1,86 @@
+{
+  "id": "1550589",
+  "name": "图片预览插件",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "930786",
+      "name": "缩小",
+      "font_class": "suoxiao",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "2034577",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "3437404",
+      "name": "三角形",
+      "font_class": "sanjiaoxing",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "6024067",
+      "name": "左旋转",
+      "font_class": "zuoxuanzhuan",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "6028037",
+      "name": "右旋转",
+      "font_class": "youxuanzhuan",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "6135079",
+      "name": "下三角形",
+      "font_class": "xiasanjiaoxing",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "6893153",
+      "name": "左箭头",
+      "font_class": "right",
+      "unicode": "e668",
+      "unicode_decimal": 58984
+    },
+    {
+      "icon_id": "7044336",
+      "name": "放大",
+      "font_class": "fangda",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "7884978",
+      "name": "恢复默认大小",
+      "font_class": "huifumorendaxiao",
+      "unicode": "e6d0",
+      "unicode_decimal": 59088
+    },
+    {
+      "icon_id": "8323345",
+      "name": "左箭头",
+      "font_class": "right1",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "9012171",
+      "name": "关  闭",
+      "font_class": "guanbi",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    }
+  ]
+}

@@ -6,7 +6,7 @@
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
-    <h3>Installed CLI Plugins</h3>
+    <h3 @click="openView">Installed CLI Plugins</h3>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
@@ -40,11 +40,30 @@ export default {
     imgView: () => import('./imgView')
   },
   props: {
-    msg: String,
-    layer: {
-      show: false,
-      active: '',
-      data: []
+    msg: String
+  },
+  data() {
+    return {
+      layer: {
+        show: false,
+        active: 'https://images.pexels.com/photos/3331094/pexels-photo-3331094.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        data: [
+          'https://images.pexels.com/photos/3331094/pexels-photo-3331094.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          'https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          'https://images.pexels.com/photos/3127161/pexels-photo-3127161.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          'https://images.pexels.com/photos/3335431/pexels-photo-3335431.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          'https://images.pexels.com/photos/3330175/pexels-photo-3330175.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          'https://images.pexels.com/photos/3277180/pexels-photo-3277180.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          'https://images.pexels.com/photos/3323694/pexels-photo-3323694.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          'https://images.pexels.com/photos/3340136/pexels-photo-3340136.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+        ]
+      }
+    }
+  },
+  methods: {
+    // 打开弹窗
+    openView() {
+      this.layer.show = true
     }
   }
 }
