@@ -1,24 +1,27 @@
 # imgapp
 
-## Project setup
+## 安装依赖项
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 运行项目
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### 打包项目
 ```
 yarn build
 ```
 
-### Lints and fixes files
+### 单元测试
 ```
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 详细图文解析地址
+暂无
+
+### 个人博客
+http://blog.51weblove.com
