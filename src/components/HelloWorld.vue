@@ -6,7 +6,7 @@
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
-    <h3 @click="openView">Installed CLI Plugins</h3>
+    <h3 @click="openView" style="cursor: pointer;">点我查看图片预览组件</h3>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
@@ -46,17 +46,8 @@ export default {
     return {
       layer: {
         show: false,
-        active: 'https://images.pexels.com/photos/3331094/pexels-photo-3331094.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-        data: [
-          'https://images.pexels.com/photos/3331094/pexels-photo-3331094.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-          'https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-          'https://images.pexels.com/photos/3127161/pexels-photo-3127161.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-          'https://images.pexels.com/photos/3335431/pexels-photo-3335431.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-          'https://images.pexels.com/photos/3330175/pexels-photo-3330175.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-          'https://images.pexels.com/photos/3277180/pexels-photo-3277180.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-          'https://images.pexels.com/photos/3323694/pexels-photo-3323694.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-          'https://images.pexels.com/photos/3340136/pexels-photo-3340136.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
-        ]
+        active: '',
+        data: []
       }
     }
   },
@@ -64,6 +55,15 @@ export default {
     // 打开弹窗
     openView() {
       this.layer.show = true
+      this.layer.active = 'http://blog.51weblove.com/blog/wp-content/uploads/2018/12/2018120513264371.jpg'
+      this.layer.data = [
+        'http://blog.51weblove.com/blog/wp-content/uploads/2018/12/2018120513264371.jpg',
+        'http://blog.51weblove.com/blog/wp-content/themes/grace8.2.1/timthumb.php?src=http://blog.51weblove.com/blog/wp-content/uploads/2019/12/2019120611565250.jpg&h=284&w=710&zc=1',
+        'http://blog.51weblove.com/blog/wp-content/themes/grace8.2.1/timthumb.php?src=http://blog.51weblove.com/blog/wp-content/uploads/2019/12/2019120511570034-e1575518238834.jpeg&h=284&w=710&zc=1',
+        'http://blog.51weblove.com/blog/wp-content/uploads/2018/12/2018120513104820.jpg',
+        'http://blog.51weblove.com/blog/wp-content/uploads/2018/12/2018120513105920.jpg',
+        'http://blog.51weblove.com/blog/wp-content/uploads/2019/03/2019032323443850.jpg'
+      ]
     }
   }
 }

@@ -46,6 +46,7 @@
     </div>
     <!-- 下方操作区 -->
     <div class="operation">
+      <!-- 第一部分 -->
       <div class="operate_area">
         <i class="iconfont iconfangda" title="放大" @click="enlarge"></i>
         <i class="iconfont iconsuoxiao" title="缩小" @click="narrow"></i>
@@ -55,14 +56,21 @@
         <span class="line" v-if="layer.data.length > 1">|</span>
         <span class="thumb_show_button" @click="changeExpand" v-if="layer.data.length > 1">{{ expandStatus.title }}<i :class="expandStatus.icon"></i></span>
       </div>
+      <!-- 第二部分 -->
       <div class="thumb_wrap" :class="{ 'active': expandStatus.show }">
-        <i class="el-icon-arrow-left" @click="previousPage" :class="{ 'disabled': page.pageIndex === 1 }"></i>
+        <i class="iconfont iconright" @click="previousPage" :class="{ 'disabled': page.pageIndex === 1 }"></i>
         <ul>
-          <li v-for="(item, key) in layer.data" :key="key" v-if="((page.pageIndex - 1) * page.pageSize) <= key && key < (page.pageIndex * page.pageSize)" :class="{ 'active': item === layer.active }" @click="changeActive(item, key)">
+          <li
+            v-for="(item, key) in layer.data"
+            :key="key"
+            v-if="((page.pageIndex - 1) * page.pageSize) <= key && key < (page.pageIndex * page.pageSize)"
+            :class="{ 'active': item === layer.active }"
+            @click="changeActive(item, key)"
+          >
             <img :src="item" alt="">
           </li>
         </ul>
-        <i class="el-icon-arrow-right" @click="nextPage" :class="{ 'disabled': page.pageIndex === Math.ceil(layer.data.length / page.pageSize) }"></i>
+        <i class="iconfont iconright1" @click="nextPage" :class="{ 'disabled': page.pageIndex === Math.ceil(layer.data.length / page.pageSize) }"></i>
       </div>
     </div>
   </div>
@@ -104,7 +112,7 @@
         },
         page: {
           pageIndex: 1,
-          pageSize: 10
+          pageSize: 20
         },
       }
     },
@@ -133,6 +141,7 @@
       this.initMargin()
       this.handleMouse()
       this.handleESC()
+      this.handleLeftRight()
     },
     methods: {
       close() {
@@ -216,6 +225,18 @@
         document.addEventListener('keydown', (e) => {
           if (e.keyCode === 27) {
             this.layer.show = false
+          }
+        })
+      },
+      // 监听左右方向键切换active功能
+      handleLeftRight() {
+        document.addEventListener('keydown', (e) => {
+          if (e.keyCode === 37) {
+            // 监听左键
+            this.previousOne()
+          } else if (e.keyCode === 39) {
+            // 监听右键
+            this.nextOne()
           }
         })
       },
@@ -407,9 +428,11 @@
         color: #fff;
       }
     }
-        .operation{
+    // 下方操作区
+    .operation{
       width: 100%;
       z-index: 3001;
+      // 操作区
       .operate_area{
         display: flex;
         width: 100%;
@@ -427,6 +450,22 @@
             color: #fff;
 
           }
+          &.iconfangda{
+            font-size: 22px;
+          }
+          &.iconsuoxiao{
+            font-size: 22px;
+            padding-bottom: 3px;
+          }
+          &.iconhuifumorendaxiao{
+            font-size: 27px;
+          }
+          &.iconzuoxuanzhuan{
+            font-size: 22px;
+          }
+          &.iconyouxuanzhuan{
+            font-size: 22px;
+          }
         }
         .line{
           margin-right: 18px;
@@ -437,7 +476,7 @@
           font-size: 16px;
           cursor: pointer;
           i{
-            font-size: 20px;
+            font-size: 18px;
             position: absolute;
             bottom: -1px;
             right: -44px;
@@ -447,6 +486,7 @@
           }
         }
       }
+      // 缩略图展开后的显示区域
       .thumb_wrap{
         height: 0px;
         transition: 0.2s;
@@ -476,7 +516,10 @@
         }
         ul{
           display: flex;
+          justify-content: center;
           overflow: hidden;
+          margin: 0;
+          padding: 0;
           li{
             width: 80px;
             height: 60px;
