@@ -1,27 +1,27 @@
-# vue-imgview
+# imgapp
 
-## install
+## 安装依赖项
 ```
 yarn install
 ```
 
-### start
+### 运行项目
 ```
 yarn serve
 ```
 
-### build
+### 打包项目
 ```
 yarn build
 ```
 
-### test
+### 单元测试
 ```
 yarn lint
 ```
 
-### how to make vue-imgview as a common component
+### 详细图文解析地址
 暂无
 
-### blog
+### 个人博客
 http://blog.51weblove.com

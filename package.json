@@ -1,6 +1,7 @@
 {
-  "name": "@cmdparkour/vue-imgview",
-  "version": "0.1.1",
+  "name": "imgapp",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
