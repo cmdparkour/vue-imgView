@@ -79,7 +79,7 @@
 <script>
   import QRCode from 'qrcode'
   export default {
-    name: 'vue-imgview',
+    name: 'vue-lookimg',
     props: {
       'layer': {
         type: Object,

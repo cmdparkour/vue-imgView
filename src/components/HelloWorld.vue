@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h3 @click="openView" style="cursor: pointer;">点我查看图片预览组件</h3>
-    <vue-imgview :layer="layer" />
+    <vue-lookimg :layer="layer" />
   </div>
 </template>
 

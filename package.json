@@ -1,15 +1,15 @@
 {
   "name": "vue-lookimg",
-  "version": "0.1.1",
-  "description": "the imgview is based on vue.js that can easyily show photos fullscreen, it has function like switch photos, enlarge or narrow photo, rotate photo, move photo",
-  "main": "lib/vue-imgview.umd.js",
+  "version": "0.1.8",
+  "description": "the lookimg is based on vue.js that can easyily show photos fullscreen, it has function like switch photos, enlarge or narrow photo, rotate photo, move photo",
+  "main": "lib/vue-lookimg.umd.min.js",
   "keyword": "图片预览 vue图片预览插件",
   "author": "前端喵",
   "private": false,
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "lib": "vue-cli-service build --target lib --name vue-imgview --dest lib src/plugin/index.js"
+    "lib": "vue-cli-service build --target lib --name vue-lookimg --dest lib src/plugin/index.js"
   },
   "dependencies": {
     "core-js": "^3.4.3",

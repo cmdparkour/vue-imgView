@@ -1,6 +1,5 @@
 node_modules/
 public/
-src/
 .gitignore
 babel.config.js
 package-lock.json
