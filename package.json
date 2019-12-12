@@ -1,6 +1,6 @@
 {
   "name": "vue-lookimg",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "the imgview is based on vue.js that can easyily show photos fullscreen, it has function like switch photos, enlarge or narrow photo, rotate photo, move photo",
   "main": "lib/vue-imgview.umd.js",
   "keyword": "图片预览 vue图片预览插件",
