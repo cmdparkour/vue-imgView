@@ -1,25 +1,26 @@
 {
-  "name": "@cmdparkour/vue-imgview",
-  "version": "0.1.1",
+  "name": "vue-lookimg",
+  "version": "0.1.0",
+  "description": "the imgview is based on vue.js that can easyily show photos fullscreen, it has function like switch photos, enlarge or narrow photo, rotate photo, move photo",
+  "main": "lib/vue-imgview.umd.js",
+  "keyword": "图片预览 vue图片预览插件",
+  "author": "前端喵",
+  "private": false,
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lib": "vue-cli-service build --target lib --name vue-imgview --dest lib src/plugin/index.js"
   },
   "dependencies": {
     "core-js": "^3.4.3",
     "node-sass": "^4.13.0",
     "qrcode": "^1.4.4",
     "sass-loader": "^8.0.0",
-    "vue": "^2.6.10",
-    "vue-router": "^3.1.3",
-    "vuex": "^3.1.2"
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
     "@vue/cli-plugin-eslint": "^4.1.0",
-    "@vue/cli-plugin-router": "^4.1.0",
-    "@vue/cli-plugin-vuex": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
