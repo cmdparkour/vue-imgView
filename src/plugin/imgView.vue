@@ -79,8 +79,7 @@
 <script>
   import QRCode from 'qrcode'
   export default {
-    components: {
-    },
+    name: 'vue-imgview',
     props: {
       'layer': {
         type: Object,
