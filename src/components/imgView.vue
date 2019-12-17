@@ -156,16 +156,8 @@
       },
       // 根据图片大小初始化marginTop和marginLeft
       initMargin() {
-        let dom = this.$refs.image
-        if (dom.width && dom.height) {
-          this.marginLeft = -dom.width/2
-          this.marginTop = -dom.height/2
-        } else {
-          dom.onload = () => {
-            this.marginLeft = -dom.width/2
-            this.marginTop = -dom.height/2
-          }
-        }
+        this.marginLeft = 0
+        this.marginTop = 0
       },
       // 上一个
       previousOne() {
@@ -197,8 +189,8 @@
         let startX = e.clientX
         let startY = e.clientY
         document.onmousemove = (ev) => {
-          this.marginLeft = ev.clientX - startX + this.marginLeft
-          this.marginTop = ev.clientY - startY + this.marginTop
+          this.marginLeft = (ev.clientX - startX) * 2 + this.marginLeft
+          this.marginTop = (ev.clientY - startY) * 2 + this.marginTop
           startX = ev.clientX
           startY = ev.clientY
         }
@@ -382,12 +374,12 @@
         margin: 15px 0;
         height: calc(100% - 30px);
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img{
           transition: transform 0.3s ease 0s;
           z-index: 3012;
-          position: absolute;
-          top: 50%;
-          left: 50%;
         }
       }
       .item{
